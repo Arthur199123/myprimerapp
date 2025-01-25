@@ -1,0 +1,40 @@
+# main.py
+import sumar
+import restar
+import multiplicacion
+import dividir
+import suma_avanzada
+
+def menu():
+    print("Seleccione una opción:")
+    print("1. Sumar dos números")
+    print("2. Restar dos números")
+    print("3. Multiplicar dos números")
+    print("4. Dividir dos números")
+    print("5. Suma avanzada")
+    print("6. Salir")
+    return input("Ingrese su elección: ")
+
+def main():
+    while True:
+        choice = menu()
+        if choice == '1':
+            num1 = float(input("Ingrese el primer número: "))
+            num2 = float(input("Ingrese el segundo número: "))
+            print(f"Resultado: {sumar.sumar(num1, num2)}")
+        elif choice == '2':
+            num1 = float(input("Ingrese el primer número: "))
+            num2 = float(input("Ingrese el segundo número: "))
+            print(f"Resultado: {restar.restar(num1, num2)}")
+        elif choice == '3':
+            num1 = float(input("Ingrese el primer número: "))
+            num2 = float(input("Ingrese el segundo número: "))
+            print(f"Resultado: {multiplicacion.multiplicar(num1, num2)}")
+        elif choice == '4':
+            num1 = float(input("Ingrese el primer número: "))
+            num2 = float(input("Ingrese el segundo número: "))
+            print(f"Resultado: {dividir.dividir(num1, num2)}")
+        elif choice == '5':
+            nums = input("Ingrese los números separados por espacios: ").split()
+            nums = [float(num) for num in nums]
+            print(f"Resultado
